@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: slategray;
+        }
+
+        #divi{
+            text-align: center;
+            color: wheat;
+            font: normal 2rem Arial;
+            background-color: steelblue;
+            height: 300px;
+            width: 300px;
+            line-height: 300px;
+            border-radius: 5px;
+            box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.651);
+        }
+    </style>
+    <title>Eventos DOM</title>
+</head>
+<body>
+
+    <div id="divi">
+        Interaja...
+    </div>
+    
+
+    <script>
+            var a = window.document.getElementById('divi')
+            a.addEventListener('click', clicar)
+            a.addEventListener('mouseenter', entrar)
+            a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'click!'
+            a.style.background = 'tomato'
+        }
+        function sair() {
+            a.innerText = 'saiu!'
+            a.style.background = 'steelblue'
+        }
+        function entrar() {
+            a.innerText = 'entrou!'
+        }
+    </script>
+    
+</body>
+</html>
